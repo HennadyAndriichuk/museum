@@ -1,0 +1,296 @@
+.modal{
+   display: none;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 6;
+}
+.modal.active{
+   display: flex;
+}
+.modal-grey{
+   background-color: gray;
+   opacity: 0.7;
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.modal-menu-container{
+   display: flex;
+   max-width: 1280px;
+   width: 100%;
+   height: 800px;
+   flex-direction: column;
+   background-color: #3F5252;
+   opacity: 1;
+   position: absolute;
+   @media(max-width: 768px){
+      height: 1092px;
+   }
+   @media(max-width: 320px){
+      height: 747px;
+   }
+   .header-wrapper{
+      display: flex;
+      width: 100%;
+      height: 90px;
+      justify-content: center;
+      align-items: center;
+      @media(max-width: 768px){
+         height: 77px;
+      }
+      @media(max-width: 320px){
+         height: 80px;
+      }
+      .header-container{
+         display: flex;
+         max-width: 1170px;
+         align-items: center;
+         width: 100%;
+         height: 100%;
+         justify-content: space-between;
+         @media(max-width: 768px){
+            max-width: 690px;
+            width: 100%;
+         }
+         @media(max-width: 320px){
+            max-width: 280px;
+            width: 100%;
+         }
+         .burger-dropdown-container{
+            display: flex;
+            width: 100%;
+            max-width: 104px;
+            height: 30px;
+            justify-content: space-between;
+            align-items: center;
+            @media(max-width: 768px){
+               max-width: 93px;
+            }
+            @media(max-width: 320px){
+               flex-direction: row-reverse;
+               max-width: 97px;
+            }
+            .cross{
+               width: 30px;
+               height: 30px;
+               &:hover{
+                  cursor: pointer;
+               }
+            }
+            .dropdown{
+               display: flex;
+               color: #F1F5F4;
+               font-size: 16px;
+               font-family: Raleway;
+               font-weight: 500;
+               line-height: 24px;
+               word-wrap: break-word;
+               .arrow-down{
+                  &:hover{
+                     cursor: pointer;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .content-wrapper{
+      display: flex;
+      max-width: 1280px;
+      width: 100%;
+      height: 663px;
+      margin-top: 13px;
+      justify-content: flex-end;
+      @media(max-width: 768px){
+         max-width: 768px;
+         margin-top: 30px;
+         width: 100%;
+         height: 985px;
+         justify-content: center;
+      }
+      @media(max-width: 320px){
+         max-width: 320px;
+         margin-top: 10px;
+         width: 100%;
+         height: 677px;
+         justify-content: center;
+      }
+      .content-container{
+         display: flex;
+         max-width: 1225px;
+         width: 100%;
+         height: 100%;
+         justify-content: space-between;
+         @media(max-width: 768px){
+            max-width: 690px;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+         }
+         @media(max-width: 320px){
+            max-width: 280px;
+            width: 100%;
+         }
+         .title-tickets-wrapper{
+            display: flex;
+            max-width: 570px;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            @media(max-width: 768px){
+               max-width: 690px;
+               width: 100%;
+            }
+            .event-date{
+               display: flex;
+               max-width: 424px;
+               width: 100%;
+               height: 44px;
+               justify-content: space-between;
+               color: #F1F5F4;
+               font-size: 14px;
+               font-family: Raleway;
+               font-weight: 400;
+               line-height: 19.60px;
+               word-wrap: break-word;
+               @media(max-width: 320px){
+                  flex-direction: column;
+                  height: 108px;
+                  justify-content: space-between;
+               }
+               .schedule-container .address-container {
+                  flex-direction: column;
+                  justify-content: space-between;
+               }
+            }
+            .actual-events{
+               display: flex;
+               width: 100%;
+               height: 58px;
+               margin-top: 70px;
+               color: #F1F5F4;
+               font-size: 48px;
+               font-family: Playfair Display;
+               font-weight: 700;
+               line-height: 57.60px;
+               word-wrap: break-word;
+               @media(max-width: 768px){
+                  margin-top: 50px;
+               }
+               @media(max-width: 320px){
+                  margin-top: 40px;
+                  font-size: 20px;
+                  line-height: 30px;
+                  height: 30px;
+               }
+            }
+            .closest-events{
+               display: flex;
+               width: 100%;
+               height: 40px;
+               margin-top: 60px;
+               color: #F1F5F4;
+               font-size: 48px;
+               font-family: Playfair Display;
+               font-weight: 700;
+               line-height: 57.60px;
+               word-wrap: break-word;
+               @media(max-width: 768px){
+                  margin-top: 30px;
+               }
+               @media(max-width: 320px){
+                  margin-top: 20px;
+                  font-size: 20px;
+                  line-height: 30px;
+                  height: 30px;
+               }
+            }
+            .news{
+               display: flex;
+               width: 100%;
+               height: 40px;
+               margin-top: 60px;
+               color: #F1F5F4;
+               font-size: 48px;
+               font-family: Playfair Display;
+               font-weight: 700;
+               line-height: 57.60px;
+               word-wrap: break-word;
+               @media(max-width: 768px){
+                  margin-top: 30px;
+               }
+               @media(max-width: 320px){
+                  margin-top: 20px;
+                  font-size: 20px;
+                  line-height: 30px;
+                  height: 30px;
+               }
+            }
+            .buy-tickets-button{
+               display: flex;
+               width: 270px;
+               height: 60px;
+               justify-content: center;
+               align-items: center;
+               background-color: #CD4D31;
+               margin-top: 60px;
+               color: #F1F5F4;
+               font-size: 16px;
+               font-family: Raleway;
+               font-weight: 600;
+               line-height: 16px;
+               word-wrap: break-word;
+               @media(max-width: 768px){
+                  margin-top: 50px;
+               }
+               @media(max-width: 320px){
+                  margin-top: 40px;
+               }
+               &:hover{
+                  cursor: pointer;
+               }
+            }
+            hr{
+               max-width: 570px;
+               width: 100%;
+               height: 1px;
+               margin-top: 60px;
+               color: #F1F5F4;
+               @media(max-width: 768px){
+                  width: 100%;
+                  max-width: 690px;
+                  margin-top: 50px;
+               }
+               @media(max-width: 320px){
+                  width: 100%;
+                  max-width: 280px;
+                  margin-top: 40px;
+               }
+            }
+         }
+         .picture-container{
+            display: flex;
+            width: 100%;
+            max-width: 625px;
+            height: 100%;
+            @media(max-width: 768px){
+               width: 100%;
+               max-width: 422px;
+               height: 466px;
+            }
+            @media(max-width: 320px){
+               display: none;
+            }
+            img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+}
